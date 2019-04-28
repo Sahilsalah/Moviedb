@@ -58,7 +58,6 @@ class Home extends Component {
     fetch(endpoint)
       .then(result => result.json())
       .then(result => {
-        console.log(result)
         this.setState({
           movies: [...movies, ...result.results],
           heroImage: heroImage || result.results[0],
@@ -93,9 +92,8 @@ class Home extends Component {
             })}
           </FourColGrid>
           {this.state.loading ? <Spinner /> : null}
-          {this.state.currentPage <= this.state.totalPages && !this.state.loading ? <LoadMoreBtn text="Load More" onClick={this.loadMoreItems} /> : null}
+          {this.state.currentPage <= this.state.totalPages && !this.state.loading ? <LoadMoreBtn text="More" onClick={this.loadMoreItems} /> : null}
         </div>
-        s
       </div>
     )
   }
