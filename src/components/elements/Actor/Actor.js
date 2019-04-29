@@ -3,9 +3,13 @@ import './Actor.css'
 import { IMAGE_BASE_URL } from '../../../config'
 
 const Actor = props => {
+  const POSTER_SIZE = 'w154'
+
   return (
-    <div>
-      <h1>Actor Component</h1>
+    <div className="rmdb-actor ">
+      <img src={props.actor.profile_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${props.actor.profile_path}` : './images/no-image.jpg'} alt="actor-images" />
+      <span className="rmdb-actor-name">{props.actor.name}</span>
+      <span className="rmdb-actor-character">{props.actor.character}</span>
     </div>
   )
 }

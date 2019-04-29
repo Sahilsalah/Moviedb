@@ -28,13 +28,19 @@
   float: left;
 }
 
-.fa-time, .fa-revenue {
+.fa-time,
+.fa-revenue {
   float: left;
   margin-top: -4px;
-
 }
 
 .fa-budget {
   float: left;
   margin-top: -3px;
+}
+
+@media screen and (max-width: 720px) {
+  .rmdb-movieinfobar-info {
+    display: none;
+  }
 }
