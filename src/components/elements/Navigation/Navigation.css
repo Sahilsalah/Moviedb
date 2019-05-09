@@ -25,3 +25,9 @@
   text-decoration: none;
   margin: 0;
 }
+
+@media screen and (max-width: 720px) {
+  .rmdb-navigation {
+    height: 70px;
+  }
+}
